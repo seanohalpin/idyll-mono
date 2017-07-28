@@ -107,7 +107,11 @@ var InteractiveDocument = function (_React$PureComponent) {
     value: function componentDidMount() {
       var _this5 = this;
 
-      Object.keys(this._idyllRefs).forEach(function (name) {
+      var refKeys = Object.keys(this._idyllRefs);
+      if (!refKeys.length) {
+        return;
+      }
+      refKeys.forEach(function (name) {
         var ref = _this5._idyllRefs[name];
         var rect = ref.domNode().getBoundingClientRect();
         _this5._idyllRefs[name]._node = ref.domNode();

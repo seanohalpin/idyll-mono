@@ -12,6 +12,7 @@ var React = require('react');
 var htmlTags = require('html-tags');
 var changeCase = require('change-case');
 var memoize = require('memoizee');
+var isClass = require('is-class');
 
 var _require = require('../constants'),
     COMPONENTS = _require.COMPONENTS,
@@ -49,12 +50,14 @@ module.exports = function (component, componentClasses) {
       for (var i = 1; i < split.length; i++) {
         componentClass = componentClass[split[i]];
       }
-      if (typeof componentClass !== 'string') {
+      if (componentClass.hasOwnProperty('default')) {
+        componentClass = componentClass.default;
+      }
+      if (isClass(componentClass)) {
         var update = component.handleUpdateProps(id);
-
-        if (componentClass.default) {
-          return function (_componentClass$defau) {
-            _inherits(_class, _componentClass$defau);
+        try {
+          return function (_componentClass) {
+            _inherits(_class, _componentClass);
 
             function _class() {
               _classCallCheck(this, _class);
@@ -70,27 +73,8 @@ module.exports = function (component, componentClasses) {
             }]);
 
             return _class;
-          }(componentClass.default);
-        }
-
-        return function (_componentClass) {
-          _inherits(_class2, _componentClass);
-
-          function _class2() {
-            _classCallCheck(this, _class2);
-
-            return _possibleConstructorReturn(this, (_class2.__proto__ || Object.getPrototypeOf(_class2)).apply(this, arguments));
-          }
-
-          _createClass(_class2, [{
-            key: 'updateProps',
-            value: function updateProps(newProps) {
-              return update.call(this, newProps);
-            }
-          }]);
-
-          return _class2;
-        }(componentClass);
+          }(componentClass);
+        } catch (e) {/* just in case something weird happens, return the unmodified class */}
       }
     } else if (htmlTags.indexOf(name.toLowerCase()) > -1) {
       componentClass = name.toLowerCase();
