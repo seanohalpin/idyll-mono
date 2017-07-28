@@ -4,8 +4,8 @@
     "idyll-cli",
     "idyll-compiler",
     "idyll-components",
-    "idyll-editor",
-    "idyll-document"
+    "idyll-document",
+    "idyll-editor"
   ],
   "version": "0.0.0",
   "npmClient": "yarn"
