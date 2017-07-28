@@ -1,0 +1,12 @@
+{
+  "lerna": "2.0.0",
+  "packages": [
+    "idyll-cli",
+    "idyll-compiler",
+    "idyll-components",
+    "idyll-editor",
+    "idyll-document"
+  ],
+  "version": "0.0.0",
+  "npmClient": "yarn"
+}
