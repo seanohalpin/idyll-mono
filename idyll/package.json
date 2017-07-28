@@ -1,7 +1,7 @@
 {
-  "name": "idyll-cli",
+  "name": "idyll",
   "version": "1.12.0",
-  "description": "Command line interface for idyll lang",
+  "description": "API and command line interface for Idyll",
   "main": "src/index.js",
   "bin": {
     "idyll": "bin/idyll.js"
