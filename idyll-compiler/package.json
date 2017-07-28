@@ -10,18 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idyll-lang/idyll-compiler.git"
+    "url": "git+https://github.com/idyll-lang/idyll.git"
   },
   "keywords": [
     "idyll",
     "compiler"
   ],
-  "author": "Matthew Conlen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/idyll-lang/idyll-compiler/issues"
-  },
-  "homepage": "https://github.com/idyll-lang/idyll-compiler#readme",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0"

@@ -1,7 +1,7 @@
 {
-  "name": "idyll-default-components",
+  "name": "idyll-components",
   "version": "1.7.0",
-  "description": "Components that ship by default in new Idyll projects",
+  "description": "Default components for use in Idyll projects",
   "main": "index.js",
   "scripts": {
     "prepublish": "babel components --out-dir .",
@@ -15,17 +15,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idyll-lang/idyll-default-components.git"
+    "url": "git+https://github.com/idyll-lang/idyll.git"
   },
   "keywords": [
-    "Idyll"
+    "idyll",
+    "components"
   ],
-  "author": "Matthew Conlen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/idyll-lang/idyll-default-components/issues"
-  },
-  "homepage": "https://github.com/idyll-lang/idyll-default-components#readme",
   "dependencies": {
     "d3-array": "^1.2.0",
     "d3-drag": "^1.1.0",

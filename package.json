@@ -1,4 +1,9 @@
 {
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/idyll-lang/idyll.git"
+  },
+  "license": "MIT",
 	"devDependencies": {
 		"lerna": "^2.0.0"
 	}

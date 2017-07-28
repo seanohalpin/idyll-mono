@@ -1,5 +1,5 @@
 {
-  "name": "idyll",
+  "name": "idyll-cli",
   "version": "1.12.0",
   "description": "Command line interface for idyll lang",
   "main": "src/index.js",
@@ -14,14 +14,10 @@
     "url": "git+https://github.com/idyll-lang/idyll.git"
   },
   "keywords": [
-    "idyll"
+    "idyll",
+    "cli"
   ],
-  "author": "Matthew Conlen",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/idyll-lang/idyll/issues"
-  },
-  "homepage": "https://github.com/idyll-lang/idyll#readme",
   "dependencies": {
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.22.0",

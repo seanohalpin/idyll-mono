@@ -1,10 +1,14 @@
 {
-  "name": "idyll-interactive-document",
+  "name": "idyll-document",
   "version": "1.0.2",
-  "license": "MIT",
-  "author": {
-    "name": "Matthew Conlen"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idyll-lang/idyll.git"
   },
+  "keywords": [
+    "idyll"
+  ],
+  "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
